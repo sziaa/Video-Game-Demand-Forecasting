@@ -4,6 +4,7 @@ Time-series forecasting project predicting next-month video game demand using Ra
 The goal is to understand how player demand evolves over time and identify the key drivers of forecasting performance.
 
 **Problem Statement**
+
 Accurately forecasting player demand is critical for:
 - game studios planning updates and releases
 - platform operators managing infrastructure and engagement
@@ -12,6 +13,7 @@ Accurately forecasting player demand is critical for:
 This project aims to predict next-month average player counts using historical data and evaluate model performance across different game behaviors.
 
 **Dataset**
+
 Source: SteamCharts + Steam metadata APIs
 Scope: 100+ popular video games
 Time horizon: Monthly player data across multiple years
@@ -24,6 +26,7 @@ Each data point includes:
 - volatility and lifecycle indicators
 
 **Methodology**
+
 1. Feature Engineering
 
 Constructed time-series features including:
@@ -60,6 +63,7 @@ Results:
 - Improvement: 24.39%
 
 **Key Findings**
+
 - 1. Demand is highly autocorrelated
   - ~95% of predictive signal comes from recent player activity
   - Lag and rolling features dominate feature importance
@@ -75,17 +79,20 @@ Results:
   - Distance from peak does not strongly explain short-term growth
 
 **Limitations**
+
 - Model relies solely on historical player data
 - Does not incorporate external signals such as: game updates, DLC releases, marketing events
 - Struggles with highly volatile, event-driven games
 
 **Future Improvements**
+
 - Incorporate external data sources (news, updates, release schedules)
 - Use sequence-based models (LSTM, Transformer)
 - Add classification layer to detect spike events
 - Improve forecasting for high-volatility segments
 
 **Tech Stack**
+
 - Python
 - Pandas / NumPy
 - Scikit-learn
