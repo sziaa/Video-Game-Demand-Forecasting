@@ -14,8 +14,11 @@ This project aims to predict next-month average player counts using historical d
 
 **Dataset**
 
+
 Source: SteamCharts + Steam metadata APIs
+
 Scope: 100+ popular video games
+
 Time horizon: Monthly player data across multiple years
 
 Each data point includes:
@@ -64,18 +67,18 @@ Results:
 
 **Key Findings**
 
-- 1. Demand is highly autocorrelated
+- Demand is highly autocorrelated
   - ~95% of predictive signal comes from recent player activity
   - Lag and rolling features dominate feature importance
-- 2. Forecasting works best for stable games
+- Forecasting works best for stable games
   - Low-volatility games: ~11.7% error
   - High-volatility games: ~17.2% error
-- 3. Event-driven spikes are the main source of error
+- Event-driven spikes are the main source of error
   - Largest errors occur on games with: updates, viral growth, seasonal spikes
-- 4. Model shows slight overprediction bias
+- Model shows slight overprediction bias
   - ~54% of predictions overestimate demand
   - Indicates difficulty capturing post-spike declines
-- 5. Lifecycle alone is not a strong predictor
+- Lifecycle alone is not a strong predictor
   - Distance from peak does not strongly explain short-term growth
 
 **Limitations**
